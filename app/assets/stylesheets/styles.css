@@ -1,0 +1,420 @@
+
+#footer .container {
+    background-color: #212224;
+}
+
+.copyright {
+    font-size: .85em;
+}
+
+
+/* h3 */
+.report_id {
+    font-size: 12pt !important;
+    line-height: 2.35em;
+}
+
+
+.author {
+    color: #9ea0a5;
+    font-family: "Roboto", Helvetica, Arial, sans-serif;
+    font-weight: 300 !important;
+    font-size: 11pt;
+    text-transform: none !important;
+}
+
+
+.report h5 {
+    padding-top: 20px;
+    font-weight: 700;
+    color: #587282;
+    text-transform: uppercase;
+}
+
+h5.date_time {
+    padding-top: 0;
+    color: #9EA0A5;
+    text-transform: uppercase;
+    font-size: 9pt;
+}
+
+.report h3, .publication h3, .publication h4 {
+    padding-top: 20px;
+}
+
+.report h3 {
+    color: #536b7a;
+    font-size: 9.5pt;
+    font-weight: 700;
+    letter-spacing: 1.5pt;
+    padding-top: 30px;
+}
+
+.report h3, .publication h3, .publication h4 {
+    padding-top: 20px;
+}
+
+.publication h2 {
+    padding: 10px 0;
+}
+
+img.small {
+    margin: auto;
+    width: 100%;
+    height: auto;
+    max-width: 320px;
+
+}
+
+h5.note {
+    color: #f19615;
+    line-height: 1.25em;
+    margin-top: 20px;
+}
+
+h5.software_dl_notes {
+    max-width: 300px;
+    -ms-word-wrap: break-word;
+    word-wrap: break-word;
+    display: block;
+    margin: 0 auto 20px auto;
+    line-height: 1.45;
+}
+
+hr.software_dl {
+    max-width: 300px;
+    margin: 10px auto;
+    height: 1px;
+
+}
+
+/* Button Styles */
+
+.button_area {
+    padding: 0;
+    text-align: center;
+    margin: 0 !important;
+}
+
+.button_area_admin {
+    padding: 0 !important;
+    text-align: right;
+    position: absolute;
+    right: 0;
+    margin-right: 15px !important;
+    z-index: 500;
+}
+
+.button_area_admin button {
+    padding: 0;
+}
+
+.button_area_admin .btn_left {
+    float: left;
+}
+
+.button_area_admin .btn_right {
+    float: right;
+}
+
+@media (min-width: 410px) {
+    .button_area {
+        padding: 20px 0;
+    }
+}
+
+.btn_left {
+    text-align: right;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-left: -5px;
+}
+
+.btn_right {
+    text-align: left;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-right: -5px;
+    margin-left: 5px;
+}
+
+.button_area button, .button_area input, .button_area .button {
+    border-radius: 2px;
+    padding: 5px 8px;
+    font-size: 8pt;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #fff;
+    border: none;
+    background-color: #5c656d;
+    box-shadow: none;
+    font-family: 'Exo 2', sans-serif;
+    letter-spacing: 1pt;
+    outline: 2px solid #fff;
+    outline-offset: 5px;
+    min-width: 110px;
+    margin: 30px 10px;
+    -webkit-transition: background .5s;
+    transition: background .5s;
+    text-shadow: none;
+}
+
+.button_area input {
+    width: auto !important;
+}
+
+.button_area_form {
+    width: 100%;
+    display: block;
+}
+
+.button_area_form input {
+    display: inline-block;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (min-width: 450px) {
+    .button_area button, .button_area input, .button_area button {
+        padding: 9px 10px;
+        font-size: 9pt;
+        min-width: 140px;
+        letter-spacing: 1.3pt;
+        margin: 30px 15px;
+    }
+}
+
+.button_area button.primary, .button_area a.primary, .button_area .button.primary, .button_area input.primary {
+    background-color: #0077be;
+}
+
+.button_area button:hover, .button_area button.primary:hover, button.small:hover, button.medium:hover, .btn-primary:hover, .btn-default:hover, .button_area .button.primary:hover, .button_area input.primary:hover {
+    background-color: #f19615 !important;
+    color: #fff;
+}
+
+button.small {
+    border-radius: 2px;
+    color: #fff;
+    border: none;
+    background-color: #5c656d;
+    padding: 3px 10px;
+    font-family: 'Exo 2', sans-serif;
+    font-size: 8pt;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1.5pt;
+    margin: 2px 30% 18px 0;
+    display: block;
+    -webkit-transition: background .5s;
+    transition: background .5s;
+}
+
+button.medium {
+    border-radius: 2px;
+    color: #fff;
+    border: none;
+    background-color: #5c656d;
+    padding: 8px 20px;
+    font-family: 'Exo 2', sans-serif;
+    font-size: 8pt;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1.5pt;
+    margin: 2px auto 15px auto;
+    display: block;
+    min-width: 315px;
+    text-align: left;
+    -webkit-transition: background .5s;
+    transition: background .5s;
+}
+
+button.medium .glyphicon {
+    font-size: 1.75em;
+    top: 4px;
+}
+
+button.medium .icon {
+    width: 18px;
+    margin-right: 10px;
+}
+
+button.medium.constrained {
+    min-width: 0;
+    padding: 4px 20px;
+}
+
+button.btn-left {
+    margin: 2px 0 15px 0;
+}
+
+/* Misc Styles */
+
+h5.date_time {
+    font-weight: 700;
+    color: #9EA0A5;
+}
+
+#blog-feeds h5.author {
+    color: #f19615;
+    margin-bottom: 25px;
+}
+
+.author {
+    font-family: Roboto, sans-serif;
+    color: #d6d6d6;
+    letter-spacing: normal;
+}
+
+.author a {
+    color: #f19615;
+}
+
+#blog-feeds img {
+    max-width: 300px;
+    height: auto;
+}
+
+.shield.dark {
+    background-image: url('talos_bgdk_o.svg');
+    background-position: center top;
+    background-size: 42%;
+}
+
+.info_stripe {
+    background-color: #3c3f43;
+    height: 100px;
+    text-align: center;
+}
+
+.info_stripe .external_link h5 {
+    line-height: 8.25em;
+    color: #9EA0A5;
+}
+
+.external_link h5 {
+    font-weight: 600;
+    color: #76787c;
+}
+
+.external_link .glyphicon {
+    font-size: 1.75em;
+    padding-left: 5px;
+    top: 6px;
+}
+
+.publication .external_link h5 {
+    margin: 10px 0;
+}
+
+.diagram {
+    padding: 40px 0 0 0 !important;
+}
+
+img.community {
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+    margin: auto;
+    display: block;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+.top_section {
+    margin-top: 40px;
+}
+
+
+.test {
+    border: 1px red solid;
+}
+
+samp, pre, .report code, .publication code {
+    font-family: 'Fira Mono', monospace;
+    font-size: 10pt ;
+    word-wrap: break-word;
+    line-height: 1.25em;
+    background-color: transparent;
+    border: none;
+    margin: 0;
+    color: #f19615;
+    border-radius: 0;
+    font-weight: 300;
+}
+
+.code, .report pre, .publication pre {
+    background-color: #26282a;
+    color: #f19615;
+    border: 2px solid #5c656d;
+    padding: 20px;
+    width: 100%;
+    margin: 30px 0;
+}
+
+.report h3 {
+    color: #536b7a;
+    font-size: 9.5pt;
+    font-weight: 700;
+    letter-spacing: 1.5pt;
+    padding-top: 30px;
+}
+
+.publication p a, a.highlight {
+    box-shadow: 0 1px 0 0 #f19615;
+}
+
+.publication ul li {
+    font-size: 10pt;
+    list-style: circle;
+}
+
+.publication ol li {
+    font-size: 10pt;
+    padding: 0;
+}
+
+.publication ul, .publication ol {
+    padding: 10px 20px 10px 20px;
+}
+
+a .publication:hover {
+    color: #f19615;
+}
+
+
+.note_header {
+    color: #f19615;
+    font-weight: 700;
+}
+
+small {
+    display: none;
+}
+
+.center-icon {
+    display: block;
+    margin: auto;
+}
+
+.center-icon.home {
+    margin-top: 50px;
+}
+
+.form-wrapper {
+    max-width:600px;
+    margin: 50px auto 0 auto;
+}
+
+.control-group.error {
+    color: #f19615 !important;
+    padding: 0 1px 10px 1px;
+    font-weight: 400 !important;
+    font-family: 'Roboto', sans-serif;
+    text-align: left;
+}
+
+

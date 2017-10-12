@@ -1,0 +1,95 @@
+<nav id="nav">
+  <div id="navigation">
+    <div id="mobile-nav-topper">
+      <%= link_to root_path do %>
+          <%= inline_svg("wellerkennels.svg") %>
+      <% end %>
+    </div>
+    <div id="left-nav">
+      <ul class="first">
+        <li class="nav-item <%= get_active("Puppies") %>">
+          <%= link_to puppies_path, :class => "primary_nav_link" do %>
+              <%= inline_svg("puppies.svg") %>
+              <span>Puppies</span>
+          <% end %>
+        </li>
+        <li class="nav-item <%= get_active("Training") %>">
+          <div class="primary-link-wrapper">
+            <%= link_to training_path, :class => "primary_nav_link" do %>
+                <%= inline_svg("training.svg") %>
+                <span>Training</span>
+            <% end %>
+          </div>
+          <input type="checkbox" id="vuln-sub-trigger" class="sub-nav-trigger"/>
+          <label for="vuln-sub-trigger" class="sub-nav-trigger-label">
+            <%= inline_svg("subnav_symbol.svg") %>
+          </label>
+          <ul class="sub-nav">
+            <li class="desktop-hide">
+              <%= link_to training_path do %>
+                  <h1>Training</h1>
+              <% end %>
+            </li>
+            <li class="desktop-hide"><label for="vuln-sub-trigger" class="subnav-back-button">BACK</label></li>
+            <li><%= link_to "obedience", obedience_path %></li>
+            <li><%= link_to "retriever", retriever_path %></li>
+          </ul>
+          <div class="desktop-hide subnav-overlay"><%= inline_svg("training.svg") %></div>
+        </li>
+        <li class="nav-item <%= get_active("Our Dogs") %>">
+          <div class="primary-link-wrapper">
+            <%= link_to our_dogs_path, :class => "primary_nav_link" do %>
+                <%= inline_svg("our_dogs.svg") %>
+                <span>Our Dogs</span>
+            <% end %>
+          </div>
+          <input type="checkbox" id="reputation-sub-trigger" class="sub-nav-trigger"/>
+          <label for="reputation-sub-trigger" class="sub-nav-trigger-label">
+            <%= inline_svg("subnav_symbol.svg") %>
+          </label>
+          <ul class="sub-nav">
+            <li class="desktop-hide">
+              <%= link_to our_dogs_path do %>
+                  <h1>Our Dogs</h1>
+              <% end %>
+            </li>
+            <li class="desktop-hide"><label for="reputation-sub-trigger" class="subnav-back-button">BACK</label></li>
+            <li><%= link_to "The Boys", boy_dogs_path%></li>
+            <li><%= link_to "The Girls", girl_dogs_path %></li>
+          </ul>
+          <div class="desktop-hide subnav-overlay"><%= inline_svg("our_dogs.svg") %></div>
+        </li>
+
+      </ul>
+    </div>
+    <div id="right-nav">
+      <ul class="first">
+        <li class="nav-item <%= get_active("Kennel") %>">
+          <%= link_to kennel_path, :class => "primary_nav_link" do %>
+              <%= inline_svg("icon_about.svg") %>
+              <span>Kennel</span>
+          <% end %>
+        </li>
+        <li class="nav-item <%= get_active("About") %>">
+          <%= link_to about_path, :class => "primary_nav_link" do %>
+              <%= inline_svg("icon_about.svg") %>
+              <span>About</span>
+          <% end %>
+        </li>
+        <li class="nav-item <%= get_active("Careers") %>">
+          <%= link_to careers_path, :class => "primary_nav_link" do %>
+              <%= inline_svg("icon_careers.svg") %>
+              <span>Careers</span>
+          <% end %>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<input type="checkbox" id="nav-trigger" class="nav-trigger"/>
+<label for="nav-trigger"><%= inline_svg("icon_menu.svg") %></label>
+<div id="nav-logo">
+  <%= link_to root_path, :class => "page-link" do %>
+      <%= inline_svg("talos-nav-logo.svg") %>
+  <% end %>
+</div>

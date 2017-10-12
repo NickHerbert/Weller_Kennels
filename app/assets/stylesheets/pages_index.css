@@ -1,0 +1,382 @@
+h1.jumbo {
+    font-size: 2.75em;
+    line-height: 1em;
+    text-transform: none;
+    letter-spacing: -2px;
+    padding-bottom: 50px;
+    padding-top: 45px;
+    text-align: center;
+    margin: 0;
+}
+
+@media (min-width: 410px) {
+    h1.jumbo {
+        font-size: 4em;
+        letter-spacing: -5px;
+        padding-bottom: 70px;
+        padding-top: 50px;
+    }
+}
+
+@media (min-width: 1091px) {
+    h1.jumbo {
+        font-size: 4.75em;
+        letter-spacing: -5px;
+        padding-bottom: 90px;
+        padding-top: 130px;
+    }
+}
+
+@media (min-width: 1495px) {
+    h1.jumbo {
+        font-size: 5.5em;
+        letter-spacing: -5px;
+        padding-bottom: 90px;
+        padding-top: 130px;
+    }
+}
+
+.shield {
+    background-image: url("talos_bg_o.svg");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 65%;
+}
+
+@media (min-width: 410px) {
+    .shield {
+        background-position: center 40px;
+        background-size: 70%;
+    }
+}
+
+.blog_preview p img {
+    max-width: 200px;
+    height: auto;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align:center;
+}
+
+.blog_container {
+    text-align: left;
+    max-width: 650px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.blog_preview h1 {
+    text-align: center;
+    padding-bottom: 28px;
+}
+
+.blog_preview {
+    padding-top: 1px; /* Some style I can't find is snapping weird*/
+}
+
+@media (min-width: 768px) {
+    .blog_preview {
+        padding-top: 0; /* Some style I can't find is snapping weird*/
+    }
+}
+
+/* Share Button Styles */
+
+/*removes extra icon on main button */
+.entypo-export::before {
+    display: none;
+}
+
+.share-button.sharer-0 {
+    min-width: 140px !important;
+    padding: 9px 10px;
+    display: block;
+    min-height: 45px;
+    margin-top: 20px;
+}
+
+.share-button.sharer-0 label {
+    text-align: center;
+    border-radius: 2px !important;
+    padding: 7px 8px !important;
+    min-width: 110px !important;
+    border: none;
+    background-color: #5c656d !important;
+    box-shadow: none;
+    height: 33px;
+    letter-spacing: 1pt;
+    outline: 2px solid #fff;
+    outline-offset: 5px;
+    margin: 30px 10px;
+    -webkit-transition: background .5s;
+    transition: background .5s;
+}
+
+.share-button.sharer-0 label span {
+    text-transform: uppercase;
+    font-weight: 700 !important;
+    color: #fff !important;
+    padding: 0 !important;
+    font-size: 8pt !important;
+    font-family: 'Exo 2', sans-serif !important;
+}
+
+@media (min-width: 450px) {
+    .share-button.sharer-0 label {
+        padding: 12px 10px !important;
+        min-width: 140px !important;
+        height: 42px;
+    }
+    .share-button.sharer-0 label span {
+        font-size: 9pt !important;
+    }
+}
+
+.share-button.sharer-0 label:hover {
+    background-color: #f19615 !important;
+}
+
+.share-button.sharer-0 .social.networks-4.center {
+    margin-left: -52px !important;
+}
+
+.home-preview-table {
+    width: 100%;
+    max-width: 650px;
+    margin: auto;
+}
+
+.home-preview-table tr.alt-dark { background-color: #212224; }
+
+.home-preview-table th {
+    background-color: transparent;
+}
+
+.home-preview-table thead tr {
+    border-bottom: 1px solid #636467;
+}
+
+.vuln-table-header {
+    max-width: 650px;
+    margin: 40px auto 10px auto;
+    text-align: left;
+}
+
+#blog-home-icon {
+    width: 62px;
+    height: 62px;
+}
+
+.extra-button-padding {
+    margin-bottom: 50px !important;
+}
+
+#traffic-title-block {
+    position: absolute;
+    bottom: 40px;
+    right: 0;
+    left: 0;
+    z-index: 99999;
+    padding: 5px 10px;
+    text-align: center;
+    background-color: rgba(33, 34, 36, 0.6);
+}
+
+#traffic-title-block h2 {
+    color: #e0e0e0;
+    font-weight: 300;
+    font-size: 14pt;
+    font-family: Roboto, sans-serif;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+
+#home-rep-search-block {
+    position: absolute;
+    top: 55px;
+    margin: auto;
+    z-index: 99999;
+    background-color: rgba(33, 34, 36, 0.6);
+    padding: 10px;
+    left: 0;
+    right: 0;
+}
+
+.utc-time-stamp {
+    color: #c1c1c1;
+    font-size: 8pt;
+}
+
+#home-rep-search-block .search-label {
+    text-align: center;
+    font-size: 8pt;
+}
+/* Hides legend buttons on super small screens */
+#home-overview-map #overview-legend-buttons {
+    display: none !important;
+}
+#home-overview-map #legend_wrapper {
+
+}
+#home-overview-map .map-note {
+    margin-top: 15px !important;
+    width: 100%;
+    text-align: center;
+    margin-left: auto;
+}
+
+@media (min-width: 400px) {
+    #home-rep-search-block .search-label {
+        font-size: 9pt;
+    }
+}
+
+@media (min-width: 550px) {
+    #traffic-title-block {
+        bottom: 0;
+        right: 15px;
+        left: auto;
+        text-align: right;
+        background-color: transparent;
+    }
+    #traffic-title-block h2 {
+        text-align: right;
+    }
+    #home-rep-search-block {
+        left: 15px;
+        right: auto;
+        top: 70px;
+    }
+    #home-rep-search-block .search-label {
+        font-size: 10pt;
+    }
+    #home-overview-map #legend_wrapper {
+        min-height: 50px;
+    }
+    #home-overview-map .map-note {
+        margin-top: 25px !important;
+        width: auto;
+        text-align: left;
+        margin-left: 50px;
+    }
+}
+@media (min-width: 1000px) {
+    #traffic-title-block {
+        bottom: 0;
+        right: 15px;
+        left: auto;
+    }
+    #home-overview-map > div:first-child {
+        top: 0 !important;
+    }
+    #home-rep-search-block {
+        top: 20px;
+    }
+    #home-overview-map #overview-legend-buttons {
+        display: block !important;
+    }
+}
+
+
+
+/* Adjustments to optimize map size on various screen widths */
+
+#home-overview-map {
+    min-height: 540px;
+    color: #26282A;
+    margin-top: 0;
+    background-color: transparent !important;
+}
+
+@media (min-width: 1000px) {
+    #home-overview-map {
+        min-height: 750px;
+    }
+}
+
+/* Adjusts legend on home page map only */
+#home-overview-map #legend_wrapper {
+    bottom: 40px !important;
+}
+@media (min-width: 550px) {
+    #home-overview-map #legend_wrapper {
+        bottom: 60px !important;
+    }
+}
+
+/* Adjusts zoom reset button and fullscreen button on home page map only */
+#home-overview-map .gm-style > div:last-child {
+    top: 70px !important;
+}
+
+#home-overview-map #reset_button {
+    margin-top: 63px !important;
+    margin-right: 14px;
+}
+
+@media (min-width: 550px) {
+    /* Adjusts zoom reset button and fullscreen button on home page map only */
+    #home-overview-map .gm-style > div:last-child {
+        top: 0 !important;
+    }
+    #home-overview-map #reset_button {
+        margin-top: -5px !important;
+        margin-right: 14px;
+    }
+}
+
+@media (min-width: 1000px) {
+    #home-overview-map .gm-style > div:last-child {
+        top: -50px !important;
+    }
+    #home-overview-map #reset_button {
+        margin-top: -55px !important;
+        margin-right: 14px;
+    }
+}
+/* Adjusts the automatic placement of map tools on smaller screens to give more space from top.
+ Keeps from interfering with mobile navigation
+ */
+#home-overview-map > div:first-child {
+    top: 70px !important;
+}
+
+#intro-ribbon {
+    margin: 60px auto 30px auto;
+    max-width: 1200px;
+    width: 100%;
+}
+
+#podcast-icon-plain {
+    width: 20px;
+    height: 20px;
+    margin-bottom: -5px;
+    margin-left: -5px;
+    margin-right: 3px;
+}
+
+.intro-ribbon {
+    background-image: url(introducing_ribbon3.svg);
+    background-repeat: no-repeat;
+    margin: 50px auto 5px auto;
+    background-size: contain;
+    background-position: center;
+    width: 100%;
+    height: 65px;
+    text-align: center;
+}
+
+@media (min-width: 600px) {
+    .intro-ribbon {
+        background-image: url(introducing_ribbon2.svg);
+        margin: 60px auto 30px auto;
+    }
+}
+
+@media (min-width: 800px) {
+    .intro-ribbon {
+        background-image: url(introducing_ribbon.svg);
+        margin: 60px auto 30px auto;
+    }
+}

@@ -1,0 +1,624 @@
+/********** NAVIGATION STYLES **********/
+/*
+/* Navigation is designed mobile first, all desktop specific styles will
+/* be wrapped in a media query - desktop display kicks in over 1000px.
+
+
+/****** BASIC STRUCTURE ******/
+
+/* nav #nav
+/*   -> div #navigation
+/*     -> div #mobile-nav-topper
+/*     -> div #left-nav
+/*       -> ul
+/*         -> li .nav-item
+/*           -> div .primary-link-wrapper
+/*             -> a
+/*               -> svg
+/*               -> span
+/*           -> ul .sub-nav
+/*             -> li
+/*     -> div #right-nav
+/*       -> ul
+/*         -> li .nav-item
+/*           -> div .primary-link-wrapper
+/*             -> a
+/*               -> svg
+/*               -> span
+/*           -> ul .sub-nav
+/*             -> li
+/*     -> div #nav-logo
+*/
+
+
+/* full navigation wrapper(s) */
+#nav {
+    /*height: 100%;*/
+    margin: auto;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 11pt;
+    background-color: #212224;
+}
+
+#navigation {
+    width:  100%;
+    height: 100%;
+    position: fixed;
+    top:    0;
+    right:  0;
+    bottom: 0;
+    left:   0;
+    z-index: 0;
+    background-color: #005f8e;
+    text-align: left;
+    padding: 0;
+}
+
+/* Navigation needs to be behind page wrapper for mobile but in front of it for desktop */
+@media (min-width: 1000px) {
+    #nav { height: 75px !important; max-height: 75px; font-size: 9pt;}
+    #navigation { z-index: 500; background-color: transparent; text-align: center; position:relative;}
+}
+
+#nav ul {
+    list-style: none;
+    margin:  0;
+    padding: 0;
+    display: block;
+}
+#nav li { text-align: left; }
+
+.nav-item {
+    width: 300px;
+    border: 1px solid #005f8e;
+}
+
+#nav a {
+    color: #fff;
+    font-weight: 300;
+    display: block;
+    height: 100%;
+    width:  100%;
+    -webkit-transition: color 0.2s ease, background-color 0.5s ease;
+    -moz-transition:    color 0.2s ease, background-color 0.5s ease;
+    -o-transition:      color 0.2s ease, background-color 0.5s ease;
+    transition:         color 0.2s ease, background-color 0.5s ease;
+}
+
+#nav a:hover { color: #fff; background-color: #393d43; }
+.nav-item a  { padding: 10px 15px; }
+
+.nav-item:hover { border: 1px solid #393d43; }
+@media (min-width: 1000px) {
+    .nav-item, .nav-item:hover { border: none; }
+}
+
+/* Overrides natural list display styles for horizontal nav on desktop */
+/* Also splits navigation so there is a section on either side of logo */
+@media (min-width: 1000px) {
+    #left-nav  { float: left; text-align: right; }
+    #right-nav { float: right; text-align: left; }
+    #left-nav, #right-nav { width: 50%; border-bottom: 1px solid #9ea0a6; }
+    #left-nav ul.first  { margin-right: 140px; height: 74px; float: right; }
+    #right-nav ul.first { margin-left: 140px; height: 74px; }
+    #nav a { padding: 0; color: #9ea0a5; font-weight: 400;}
+    #nav a:hover { background-color: transparent;}
+    #nav li { display: inline-block; text-align: center; height: 100%;}
+    #nav span { display: block; line-height: 1.15em; }
+    #right-nav li, #left-nav li { float: left; position: relative; }
+    .sub-nav li {float: right;}
+}
+
+.break { display: none;}
+
+/* Spacing between nav icons on large displays, also changes word breaks on longer link titles */
+@media (min-width: 1000px) { .break { display: inline !important; } #left-nav a, #right-nav a { padding: 10px 15px  0   15px; height: 100%; } }
+@media (min-width: 1170px) { .break { display: none !important; }   #left-nav a, #right-nav a { padding: 17px 15px 16px 15px; height: 100%; } }
+@media (min-width: 1300px) { #left-nav a, #right-nav a { padding:15px 20px 0 20px; } }
+
+
+/* end structural styles */
+
+
+
+/****** LOGOS ******/
+
+/* Main Talos logo that stays in center of page (top) */
+#nav-logo {
+    position: absolute;
+    z-index: 9000;
+    left:  0;
+    right: 0;
+    margin: auto;
+    width:  100%;
+    height: 50px;
+    text-align: center;
+}
+
+#nav-logo svg {
+    width: 100%;
+    height: auto;
+    max-width: 155px;
+    transition:         max-width 0.2s ease;
+    -webkit-transition: max-width 0.2s ease;
+    -moz-transition:    max-width 0.2s ease;
+    -o-transition:      max-width 0.2s ease;
+}
+
+#nav-logo svg path {
+    fill: #0077BE;
+    transition:         fill 0.2s ease;
+    -webkit-transition: fill 0.2s ease;
+    -moz-transition:    fill 0.2s ease;
+    -o-transition:      fill 0.2s ease;
+}
+
+@media (min-width: 1000px) {
+    #nav-logo {
+        background-color: transparent;
+        max-height: 115px;
+        width: 25%;
+        min-width: 150px;
+        max-width: 272px;
+        top: 0;
+    }
+    #nav-logo svg {
+        width:  100%;
+        height: 106px; /* Width and height need to be specified for IE */
+        max-width: 245px;
+    }
+    #nav-logo svg path {
+        fill: #fff;
+    }
+}
+
+#nav-logo svg polygon { fill: transparent; }
+
+@media (min-width: 1000px) {
+    #nav-logo svg polygon {
+        fill: #0077BE;
+    }
+}
+/* end main logo styles */
+
+
+/* Mobile navigation has an additional icon for 'home' in the shelf menu since
+/* the main logo stays in the center of the page away from other menu items */
+
+#mobile-nav-topper {
+    display: inline-block;
+    width: 300px;
+    padding: 9px 10px 4px 10px;
+    background-color: #1278ba;
+    border-bottom: 1px solid #fff;
+    text-align: center;
+}
+#mobile-nav-topper a:hover {
+    background: transparent !important;
+}
+@media (min-width: 1000px) {
+    #mobile-nav-topper { display: none; }
+}
+/* end mobile logo styles */
+
+
+
+/****** NAVIGATION LINK ICONS *******/
+
+.nav-item svg {
+    padding-top: 3px;
+    margin-top: 7px;
+}
+
+@media (min-width: 1000px) {
+    .nav-item svg { padding: 0; margin: 0; }
+}
+
+/* icon hover styles */
+#left-nav li:hover .nav-icon rect, #left-nav li:hover .nav-icon path, #right-nav li:hover .nav-icon rect, #right-nav li:hover .nav-icon path, #right-nav li:hover .nav-icon polygon {
+    fill: #fff;
+}
+#left-nav li .nav-icon rect, #left-nav li .nav-icon path, #right-nav li .nav-icon rect, #right-nav li .nav-icon path, #right-nav li .nav-icon polygon {
+    fill: #e5eff3;
+    -webkit-transition: fill 0.5s ease;
+    -moz-transition:    fill 0.5s ease;
+    -o-transition:      fill 0.5s ease;
+    transition:         fill 0.5s ease;
+}
+@media (min-width: 1000px) {
+    #left-nav li .nav-icon rect, #left-nav li .nav-icon path, #right-nav li .nav-icon rect, #right-nav li .nav-icon path, #right-nav li .nav-icon polygon {
+        fill: #9EA0A5;
+    }
+}
+
+#link_blog { margin-top: -1px; } /* Adjusts for pencil that sticks slightly above icon box */
+
+
+
+/****** LINK TEXT ADJUSTMENTS ******/
+#left-nav li:hover .primary_nav_link, #right-nav li:hover .primary_nav_link { color: #fff !important;}
+
+#nav span {
+    padding-left: 15px;
+    vertical-align: 5px; /* offsets span sitting at bottom of <a> tag on mobile nav */
+}
+
+@media (min-width: 1000px) {
+    #nav span {padding-left: 0; vertical-align: baseline;}
+}
+
+
+
+
+/* Mobile Shelf Styles */
+.nav-trigger + label, #page_wrapper, #nav-logo, #footer, .sub-nav-trigger, .sub-nav {
+    transition:         left 0.2s;
+    -webkit-transition: left 0.2s;
+    -moz-transition:    left 0.2s;
+    -o-transition:      left 0.2s;
+}
+
+.nav-trigger:checked + label, .nav-trigger:checked ~ #page_wrapper, .nav-trigger:checked ~ #nav-logo, .nav-trigger:checked ~ #footer {
+    left: 300px;
+}
+
+.sub-nav-trigger:checked ~ .sub-nav {
+    left: 50px;
+}
+
+.sub-nav-trigger:checked ~ .subnav-overlay {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* If someone expands mobile nav menu and then changes browser window to desktop nav (over 1000px) */
+@media (min-width: 1000px) {
+    .nav-trigger:checked + label, .nav-trigger:checked ~ #page_wrapper, .nav-trigger:checked ~ #nav-logo, .nav-trigger:checked ~ #footer {
+        left: 0;
+    }
+    .sub-nav-trigger:checked ~ .sub-nav {
+        left: 0;
+    }
+    .desktop-hide { display: none !important; }
+}
+
+
+
+
+/* Desktop & large display indicators (triangles on hover, etc) */
+@media (min-width: 1000px) {
+    #left-nav li::after, #left-nav li::before, #right-nav li::after, #right-nav li::before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        -webkit-transition: all 0.2s linear;
+        -moz-transition:    all 0.2s linear;
+        -o-transition:      all 0.2s linear;
+        transition:         all 0.2s linear;
+        backface-visibility: hidden; /* attempted hack to fix flickering on hover transition */
+    }
+
+    #left-nav li::after, #right-nav li::after {
+        border-bottom: 1px solid #f19615;
+        margin-left: 0;
+        width: 0;
+        height: 0;
+        top: 74px;
+    }
+
+    #left-nav li::before, #right-nav li::before {
+        border-style: solid;
+        border-color: #9ea0a6;
+        border-width: 1px 1px 0 0;
+        height: 1px;
+        transform: rotate(-45deg);
+        width: 1px;
+        margin-left: 0;
+        top: 74px;
+    }
+
+    #left-nav li:hover::after, #right-nav li:hover::after, #left-nav li.active:hover::after, #right-nav li.active:hover::after {
+        border-left:   7px solid transparent;
+        border-right:  7px solid transparent;
+        border-bottom: 7px solid #f19615;
+        width:  0;
+        height: 0;
+        margin-left: -7px;
+        top: 68px;
+    }
+
+    #left-nav li:hover::before, #right-nav li:hover::before {
+        border-style: solid;
+        border-color: #9ea0a6;
+        border-width: 2px 2px 0 0;
+        content: '';
+        height: 12px;
+        width:  12px;
+        transform: rotate(-45deg);
+        top: 68px;
+        margin-left: -6px;
+    }
+
+    /* Current page/category indicators */
+    #left-nav li.active::before, #right-nav li.active::before {
+        content: '';
+        position: absolute;
+        border-style: solid;
+        border-color: #9ea0a6;
+        border-width: 2px 2px 0 0;
+        height: 12px;
+        width:  12px;
+        transform: rotate(-45deg);
+        top: 68px;
+        margin-left: -6px;
+    }
+
+    #left-nav li.active::after, #right-nav li.active::after {
+        content: '';
+        position: absolute;
+        border-bottom: 2px solid #26282A;
+        margin-left: -6px;
+        width: 12px;
+        height: 0;
+        top: 74px;
+    }
+}
+
+/* Mobile sub navigation styles */
+.primary-link-wrapper {
+    width: 243px;
+    display: inline-block;
+}
+
+.subnav-overlay {
+    width:  100%;
+    height: 100%;
+    position: fixed;
+    top:    0;
+    right:  0;
+    bottom: 0;
+    left:   0;
+    background-color: #005f8e;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.25s linear;
+}
+
+.subnav-overlay svg {
+    opacity: 0.5;
+    margin: 10px 0 0 10px;
+}
+
+.sub-nav {
+    width:  100%;
+    height: 100%;
+    position: fixed;
+    top:    0;
+    right:  0;
+    bottom: 0;
+    left:   300px;
+    z-index: 1;
+    list-style: none;
+    background: #393d43;
+}
+
+.sub-nav li {
+    width: 100%;
+    height: auto;
+}
+
+.sub-nav li a {
+    display: block;
+    padding: 12px 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.sub-nav a:hover {
+    background-color: #f19615 !important;
+}
+
+.sub-nav-trigger-label svg {
+    margin-top: 3px;
+    margin-bottom: 1px;
+    padding: 0;
+}
+
+.subnav-back-button {
+    cursor: pointer;
+    width: 100%;
+    padding: 20px;
+    background-color: #2d3035;
+}
+/* css chevron */
+.subnav-back-button::before {
+    border-style: solid;
+    border-width: 3px 3px 0 0;
+    content: '';
+    display: inline-block;
+    height: 12px;
+    width:  12px;
+    position: relative;
+    vertical-align: top;
+    transform: rotate(-135deg);
+    margin-right: 30px;
+}
+
+.sub-nav h1 {
+    font-family: "Roboto", Helvetica, Arial, sans-serif;
+    text-transform: none;
+    font-weight: 300;
+    font-size: 16pt;
+    padding-top: 10px;
+}
+
+
+
+.sub-nav-trigger-label:hover svg g circle {
+    fill: #f19615;
+}
+
+.sub-nav-trigger-label:hover {
+    background-color: #393d43;
+}
+
+.sub-nav-trigger-label {
+    cursor: pointer;
+    padding: 0;
+    margin:  0;
+    text-align: center;
+    display: inline-block;
+    float: right;
+    width: 55px;
+    -webkit-transition: color 0.2s ease, background-color 0.5s ease;
+    -moz-transition:    color 0.2s ease, background-color 0.5s ease;
+    -o-transition:      color 0.2s ease, background-color 0.5s ease;
+    transition:         color 0.2s ease, background-color 0.5s ease;
+}
+
+@media (min-width: 1000px) {
+    .sub-nav-trigger-label, .sub-nav-trigger {
+        display: none;
+    }
+    .primary-link-wrapper {
+        width: auto;
+        display: block;
+        height: 100%;
+    }
+}
+
+/* Subnav (dropdown) styles for desktop and large mobile */
+@media (min-width: 1000px) {
+    .sub-nav {
+        display:block !important;
+        position: absolute;
+        left: -10%;
+        height: 0;
+        top: 75px;
+        z-index: 5000;
+        padding: 0;
+        margin:  0;
+        white-space: nowrap;
+        text-align: left !important;
+    }
+    .sub-nav.left-shift {
+        left: -75%; /* Moves subnavs that are being obstructed by center logo*/
+    }
+
+    #nav ul::before, #nav ul::after {
+        content: "";
+        display: table;
+    }
+
+    #nav ul::after {
+        clear: both;
+    }
+
+    .sub-nav li {
+        overflow: hidden;
+        text-align: left !important;
+        background-color: #393d43;
+        height: 0;
+        width: 200px;
+        -webkit-transition: height 200ms ease-in, background-color 0.3s ease;
+        -moz-transition:    height 200ms ease-in, background-color 0.3s ease;
+        -o-transition:      height 200ms ease-in, background-color 0.3s ease;
+        transition:         height 200ms ease-in, background-color 0.3s ease;
+    }
+
+    .sub-nav a {
+        display: inline-block;
+        margin-top: -4px;
+        padding: 10px !important;
+    }
+
+    .sub-nav li:hover {
+        background-color: #f19615;
+    }
+
+    .sub-nav li:hover a {
+        color: #212224 !important;
+        font-weight: 500 !important;
+    }
+
+    #nav ul > li:hover .sub-nav li {
+        height: 36px !important;
+    }
+}
+
+/* Mobile shelf trigger styles */
+
+/* hides the checkboxes */
+.nav-trigger, .sub-nav-trigger {
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+    display: block;
+}
+
+label[for="nav-trigger"] {
+    position: fixed;
+    padding: 15px 0 0 15px;
+    z-index: 9900;
+    height: 50px;
+    width:  100px;
+    cursor: pointer;
+    display: block;
+}
+
+@media (min-width: 1000px) {
+    .nav-trigger, label[for="nav-trigger"] { display: none; }
+    .nav-item { width: auto; border: none;}
+}
+
+.banner_message{
+    background-color: rgba(223, 123, 35, 1) !important;
+    padding:30px 25px 0 25px;
+}
+
+.banner_message h1 {
+    font-weight: 400;
+    color: #212224;
+    font-size: 18pt;
+    padding-top: 10px;
+}
+
+@media (min-width: 500px) {
+    .banner_message h1 {
+        font-size: 23pt;
+    }
+}
+
+@media (min-width: 1000px) {
+    .banner_message h1 {
+        padding-top: 0;
+        margin-top: 10px;
+    }
+}
+.banner_message p {
+    color: #212224;
+    font-weight: 400;
+    padding-top: 8px;
+}
+.banner_message a {
+    font-weight: 500;
+    text-decoration: underline !important;
+}
+.banner_message a:hover {
+    color: #fff;
+}
+
+.banner_message_hr{
+    background-color: rgba(173, 100, 32, 1) !important;
+    padding-top:12px !important;
+}
+
+.banner-divider {
+    background-image: url('banner_dividerline.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 20px;
+    max-width: 430px;
+    margin: 0 auto;
+}

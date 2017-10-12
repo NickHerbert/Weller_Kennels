@@ -29,6 +29,10 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
+gem 'bootstrap-switch-rails','3.3.3'
+
+
+gem 'inline_svg'
 gem 'pry',       '~> 0.11.1'
 gem 'kramdown',  '~> 1.15.0'
 gem 'bluecloth', '~> 2.2.0'

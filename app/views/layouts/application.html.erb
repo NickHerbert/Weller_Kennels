@@ -1,14 +1,37 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>WellerKennels</title>
-    <%= csrf_meta_tags %>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="canonical" href="<%= if content_for(:seo_canonical) then yield(:seo_canonical) end %>"/>
+  <title>
+    <%= if content_for?(:title) then yield(:title) + ' - ' end %> Cisco Talos
+  </title>
+  <meta name="title" content="<%= if content_for?(:seo_title) then yield(:seo_title) end %>"/>
+  <meta name="description" content="<%= if content_for?(:seo_description) then yield(:seo_description) end %>"/>
+  <meta name="keywords" content="<%= if content_for?(:seo_keywords) then yield(:seo_keywords) end %>"/>
+  <%= stylesheet_link_tag 'application', media: 'all' %>
+  <%= javascript_include_tag  "application" %>
+  <%= favicon_link_tag 'favicons/favicon.ico' %>
+  <%= yield :head %>
+  <%= csrf_meta_tags %>
+  <%= javascript_tag do %>
+  <% end %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+</head>
+<body>
 
-  <body>
-    <%= yield %>
-  </body>
+<%= render 'layouts/header' %>
+<div id="page_wrapper">
+  <small>
+    <p class="success"><%= flash[:success] if flash[:success].present? %></p>
+
+    <p class="error"><%= flash[:error] if flash[:error].present? %></p>
+  </small>
+  <%= yield %>
+</div>
+
+<%= render("layouts/footer") %>
+</body>
 </html>
