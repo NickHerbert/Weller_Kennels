@@ -21,17 +21,21 @@ ActiveRecord::Schema.define(version: 20171025022248) do
   create_table "dogs", force: :cascade do |t|
     t.string   "full_name"
     t.string   "nickname"
-    t.datetime "birthday",       default: '2017-10-25 02:24:18'
+    t.datetime "birthday",            default: '2017-10-25 02:52:56'
     t.datetime "passed_away"
-    t.string   "breed",                                          null: false
-    t.string   "sex",                                            null: false
+    t.string   "breed",                                               null: false
+    t.string   "sex",                                                 null: false
     t.integer  "parent_id"
-    t.integer  "lft",                                            null: false
-    t.integer  "rgt",                                            null: false
-    t.integer  "depth",          default: 0,                     null: false
-    t.integer  "children_count", default: 0,                     null: false
-    t.datetime "created_at",                                     null: false
-    t.datetime "updated_at",                                     null: false
+    t.integer  "lft",                                                 null: false
+    t.integer  "rgt",                                                 null: false
+    t.integer  "depth",               default: 0,                     null: false
+    t.integer  "children_count",      default: 0,                     null: false
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
+    t.datetime "created_at",                                          null: false
+    t.datetime "updated_at",                                          null: false
     t.index ["lft"], name: "index_dogs_on_lft"
     t.index ["nickname", "rgt", "lft", "parent_id"], name: "index_dogs_on_nickname_and_rgt_and_lft_and_parent_id"
     t.index ["parent_id"], name: "index_dogs_on_parent_id"
@@ -71,6 +75,10 @@ ActiveRecord::Schema.define(version: 20171025022248) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
     t.index ["email"], name: "index_users_on_email", unique: true

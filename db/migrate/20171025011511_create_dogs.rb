@@ -17,6 +17,8 @@ class CreateDogs < ActiveRecord::Migration[5.0]
       t.integer :depth, :null => false, :default => 0
       t.integer :children_count, :null => false, :default => 0
 
+      t.attachment :avatar
+
       t.timestamps
     end
     add_index :dogs,[:nickname,:rgt,:lft,:parent_id]
