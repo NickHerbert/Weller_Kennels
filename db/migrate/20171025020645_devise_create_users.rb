@@ -31,6 +31,9 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.0]
       # t.datetime :locked_at
 
 
+      #paper clip avatar attachment
+      t.attachment :avatar
+
       t.timestamps null: false
     end
 
